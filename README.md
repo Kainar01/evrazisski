@@ -28,3 +28,12 @@ Migration will create table users and seed some default users
 ```
 > pub.js   # public routing access everyone can access this APIs
 > api.js   # only logged in user/ with vaild token user can access this routes
+
+## Endpoints
+3. /public/register - register and get token (POST)
+4. /public/login - login and get token (POST, AUTHORIZED)
+5. /protected/images - get user images (GET, AUTHORIZED)
+6. /protected/images - Saves the image and stores link in db. (POST images, AUTHORIZED)
+7. /protected/images/:id - get the image by id. (GET, AUTHORIZED)
+
+JWT Token should be in header with prefix ```x-token```
